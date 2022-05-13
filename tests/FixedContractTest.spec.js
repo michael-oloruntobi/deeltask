@@ -4,7 +4,7 @@ const { POManager } = require('../pageobjects/POManager');
 const datax = JSON.parse(JSON.stringify(require('../utils/testdata.json')));
 
 
-//Login test
+//Set local storage and Login
 test.beforeEach(async ({ page }) => {
     const poManager = new POManager(page);
     const loginPage = poManager.getLoginPage();
@@ -18,8 +18,8 @@ test.beforeEach(async ({ page }) => {
     await loginPage.closePopups();
     
   })
-
-  test('Check Landing Page',async ({ page }) => {
+  //Test tp create a fixed contract
+  test('Create Fixed Contract test',async ({ page }) => {
     const poManager = new POManager(page);
     const landingPage  = poManager.getUserDashboard();
     const fixedContractForm  = poManager.getCreateFixedContractForm();
