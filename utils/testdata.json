@@ -4,9 +4,10 @@
     "name": "Kenny Big",
     "taxResidence": "United Kingdom",
     "jobTitle": "QA Engineer",
-    "rate": "1000",
+    "rate": "1,000",
     "paymentFrequency": "weekly",
     "url": "https://app.deel.training/login",
     "title": "Deel - Payroll for remote teams",
-    "workscope": "QA Engineer scope of work"
+    "workscope": "QA Engineer scope of work",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGFnZSI6ImRldiIsInByb2ZpbGUiOjQzNDI4OSwidGVhbSI6MTM3NzE2LCJvcmdhbml6YXRpb25JZCI6bnVsbCwidGltZXN0YW1wIjoxNjUyMzk4NjA0ODAyLCJpZCI6NDA3OTg3LCJleHAiOjE2NTQ5OTA2MDR9.SxPdzzbxg1TZrlK0RESKEuXQUjeV3KigvftAOS_diT0"
 }

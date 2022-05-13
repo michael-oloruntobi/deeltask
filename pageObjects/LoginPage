@@ -1,0 +1,50 @@
+const { expect } = require('@playwright/test')
+
+class LoginPage {
+
+    constructor(page) {
+        this.page = page;
+        this.emailField = page.locator("#mui-1");
+        this.passwordField = page.locator("#mui-2");
+        this.signInbutton = page.locator("[type='submit']");
+        this.cookie = page.locator("#CybotCookiebotDialogBodyButtonAccept");
+        this.popup = page.locator("[class='deel-ui__icon deel-ui__icon__orientation-up deel-ui__whats-new-popup__icon']")
+
+    }
+
+
+
+
+    async login(username, password) {
+        //Type email
+        await this.emailField.type(username);
+        //Type password
+        await this.passwordField.type(password);
+        //Click sign in button
+        await this.signInbutton.click();
+        
+    }
+
+    async closePopups() {
+                //Click allow cookie button
+                await this.cookie.click();
+                //Close popup
+                await this.popup.click();
+
+    }
+
+    async setLocStorage(){
+
+        await this.page.evaluate(
+            `window.localStorage.setItem('token', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGFnZSI6ImRldiIsInByb2ZpbGUiOjQzNDI4OSwidGVhbSI6MTM3NzE2LCJvcmdhbml6YXRpb25JZCI6bnVsbCwidGltZXN0YW1wIjoxNjUyMzk4NjA0ODAyLCJpZCI6NDA3OTg3LCJleHAiOjE2NTQ5OTA2MDR9.SxPdzzbxg1TZrlK0RESKEuXQUjeV3KigvftAOS_diT0')`
+          );
+
+    }
+
+    
+
+
+
+}
+
+module.exports = { LoginPage }

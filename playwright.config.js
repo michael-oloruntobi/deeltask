@@ -11,7 +11,7 @@ const config = {
   },
 
   reporter: [['allure-playwright', { outputFolder: 'my-allure-results' }]],
-
+  //reporter: 'html',
   use: {
 
     headless: false,
